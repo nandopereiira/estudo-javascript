@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>   
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Qual país você nasceu? <input type="text" id="txtn">
+    <input type="button" value="Responder" onclick="responder()">
+    <p id="resposta" >Você é:</p>
+
+    <script>
+        function responder () {
+            var nacionalidade = document.getElementById('txtn').value
+            var res = document.getElementById('resposta')
+            if (nacionalidade === 'brasil') {
+                resposta.innerHTML = '<p>Você é Brasileiro</p>'
+            } else if (nacionalidade === 'Brasil') {
+                resposta.innerHTML = '<p>Você é Brasileiro</p>'
+            } else if (nacionalidade === 'brazil') {
+                resposta.innerHTML = '<p>Você é Brasileiro</p>'
+            } else if (nacionalidade === 'Brazil') {
+                resposta.innerHTML = '<p>Você é Brasileiro</p>'
+            } else if (nacionalidade === 'br') {
+                resposta.innerHTML = '<p>Você é Brasileiro</p>'
+            } else if (nacionalidade === 'BR') {
+                resposta.innerHTML = '<p>Você é Brasileiro</p>'
+            } else if (nacionalidade === 'BRASIL') {
+                resposta.innerHTML = '<p>Você é Brasileiro</p>'
+            }                                               
+            else {
+                resposta.innerHTML = '<p>Você é Estrangeiro</p>'
+            }
+        }
+
+        var agora = new Date()
+        var diaSem = agora.getDay 
+
+        switch(diaSem) {
+            case 0:
+                console.log('Domingo')
+                break
+            case 1:
+                console.log('Segunda-feira')
+                break
+            case 2:
+                console.log('Terça-feira')
+                break
+            case 3:
+                console.log('Quarta-feira')
+                break
+            case 4:
+                console.log('Quinta-feira')
+                break
+            case 5:
+                console.log('Sexta-feira')
+                break     
+            case 6:
+                console.log('Sexta-feira')
+                break   
+            default:
+                console.log('Inválido')
+                break
+        }
+       console.log(diaSem)
+       
+           
+       
+
+    </script>
+</body>
+
+</html>

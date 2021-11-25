@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas e Datas</title>
+
+    <style>
+      
+    </style>
+
+</head>
+<body>
+    <h1>Controle de Horas e Datas Java</h1>
+    <p class="hora"></p>
+    <p class="message"></p>
+    <p class="semana"></p>
+
+    <script>
+
+        var relogio = new Date() //pegar dia
+        var horario = relogio.getHours() //pegar hora do dia
+        var minutos =  relogio.getSeconds()
+        var segundos = relogio.getMinutes()
+        var horas = document.querySelector('.hora').innerHTML = `São exatamente ${horario}:${segundos}:${minutos}, então: `;// var para mostrar a hora
+        var message = document.querySelector('.message'); // mensagem de Bom dia,boa tarde, boa noite
+
+
+        if (horario < 12) {
+            message.innerHTML = 'Bom Dia'
+        } else if (horario <= 18) {
+            message.innerHTML = 'Boa Tarde'
+        } else {
+            message.innerHTML = 'Boa Noite'
+        }
+
+
+        
+        var agora = new Date()
+        var diaSem = agora.getDay() 
+        var semana = document.querySelector('.semana')
+
+        switch(diaSem) {
+            case 0:
+                console.log('Domingo')
+                semana.innerHTML = 'Um excelente Domingo'
+                
+                break
+            case 1:
+                console.log('Segunda-feira')
+                semana.innerHTML = 'Uma excelente Segunda-feira'
+                break
+            case 2:
+                console.log('Terça-feira')
+                semana.innerHTML = 'Uma excelente Terça-feira'                
+                break
+            case 3:
+                console.log('Quarta-feira')
+                semana.innerHTML = 'Uma excelente Quarta-feira'
+                break
+            case 4:
+                console.log('Quinta-feira')
+                semana.innerHTML = 'Uma excelente Quinta-feira'
+                break
+            case 5:
+                console.log('Sexta-feira')
+                semana.innerHTML = 'Uma excelente Sexta-feira'
+                break     
+            case 6:
+                console.log('Sábado')
+                semana.innerHTML = 'Um excelente Sábado'
+                break   
+            default:
+                console.log('Inválido')
+                break
+        }
+
+        console.log(diaSem)
+       
+       
+           
+       
+
+    </script>
+</body>
+
+</html>
